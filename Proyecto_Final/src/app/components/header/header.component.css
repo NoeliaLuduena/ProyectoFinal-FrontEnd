@@ -1,0 +1,7 @@
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+#logo {
+    width: 125px;
+    background-color: #0d6efd;
+    border-radius: 10px;
+    margin-right: 15px;
+}

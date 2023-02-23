@@ -6,3 +6,9 @@
 h2, h3{
     display: inline;
 }
+
+ul {
+    list-style: none;
+}
+
+

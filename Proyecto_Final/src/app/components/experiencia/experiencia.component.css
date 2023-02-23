@@ -7,3 +7,10 @@ h2, h3{
     display: inline;
 }
 
+ul {
+    list-style: none;
+}
+
+#titulo{
+    padding-top: 20px;
+}

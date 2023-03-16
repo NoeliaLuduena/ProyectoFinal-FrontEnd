@@ -1,20 +1,27 @@
-<h2 id="titulo">Educación</h2>
 <div class="row">
-    
-    <div class="col-lg-11"></div>
-    <ul>
-        <li>
-            <h2>trabajo 1</h2>
-            <h3>años</h3>
-        </li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia tempora repudiandae recusandae? Voluptatibus porro fugit quas optio ipsum veniam omnis quibusdam id, in, placeat ea a recusandae modi. Ex.</p>
-    </ul>
-    <ul>
-        <li>
-            <h2>trabajo 1</h2>
-            <h3>años</h3>
-        </li>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia tempora repudiandae recusandae? Voluptatibus porro fugit quas optio ipsum veniam omnis quibusdam id, in, placeat ea a recusandae modi. Ex.</p>
-    </ul>
-</div>
+    <h2>Educación</h2>
+    <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar educación</button>
+    <div class="container py-5">
+      <!--<div class="row">
+          <div class="col-lg-7 mx-auto">
+              <div class="card rounded-0 border-0 shadow">
+                  <div class="card-body p-5">-->
+                    
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead>
+                                  <tr *ngFor="let Educacion of educacion">
+                                      <th scope="col">{{Educacion.nombreE}}</th>
+                                      <th scope="col">{{Educacion.descripcionE}}</th>
+                                      <th scope="col" *ngIf="isLogged">
+                                          <button routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-fill"></i></button></th>
+                                      <th scope="col" *ngIf="isLogged">
+                                          <button (click)="delete(Educacion.id)"><i class="bi bi-x-circle-fill"></i></button></th>
+                                      <th scope="col"></th>
+                                  </tr>
+                              </thead>
+                             
+                          </table>
+                      </div>
 
+                     

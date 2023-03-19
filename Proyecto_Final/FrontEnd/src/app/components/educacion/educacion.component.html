@@ -1,27 +1,38 @@
-<div class="row">
-    <h2>Educación</h2>
-    <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar educación</button>
-    <div class="container py-5">
-      <!--<div class="row">
-          <div class="col-lg-7 mx-auto">
-              <div class="card rounded-0 border-0 shadow">
-                  <div class="card-body p-5">-->
-                    
-                      <div class="table-responsive">
-                          <table class="table">
-                              <thead>
-                                  <tr *ngFor="let Educacion of educacion">
-                                      <th scope="col">{{Educacion.nombreE}}</th>
-                                      <th scope="col">{{Educacion.descripcionE}}</th>
-                                      <th scope="col" *ngIf="isLogged">
-                                          <button routerLink="/editedu/{{Educacion.id}}"><i class="bi bi-pencil-fill"></i></button></th>
-                                      <th scope="col" *ngIf="isLogged">
-                                          <button (click)="delete(Educacion.id)"><i class="bi bi-x-circle-fill"></i></button></th>
-                                      <th scope="col"></th>
-                                  </tr>
-                              </thead>
-                             
-                          </table>
-                      </div>
-
-                     
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Educación</h2>
+    <button
+      type="button"
+      class="btn btn-info"
+      routerLink="/nuevaedu"
+      *ngIf="isLogged"
+    >
+      Agregar educación
+      <i class="bi bi-plus-circle-fill"></i>
+    </button>
+    <div class="line"></div>
+    <div *ngFor="let Educacion of educacion">
+      <div class="card-text">{{ Educacion.nombreE }}</div>
+      <p class="card-text">{{ Educacion.descripcionE }}</p>
+      <footer>
+        <button
+          class="btn btn-info"
+          routerLink="/editedu/{{ Educacion.id }}"
+          *ngIf="isLogged"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <div class="space"></div>
+        <button
+          class="btn btn-info"
+          (click)="delete(Educacion.id)"
+          *ngIf="isLogged"
+        >
+          <i class="bi bi-x-circle-fill"></i>
+        </button>
+        <div class="space"></div>
+        <div class="line"></div>
+      </footer>
+    </div>
+  </div>
+</div>

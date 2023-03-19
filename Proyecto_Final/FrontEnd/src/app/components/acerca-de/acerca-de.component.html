@@ -1,48 +1,28 @@
-
-<!--<div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/data/imagenes/profile.jpg"
-         class="img-fluid" id="fotodeperfil">
+<div class="row">
+  <button
+    type="button"
+    class="btn btn-info"
+    routerLink="/editacercade/1"
+    *ngIf="isLogged"
+  >
+    Editar persona <i class="bi bi-pencil-fill"></i>
+  </button>
+  <div id="testimonial-slider">
+    <div class="testimonial">
+      <div class="pic">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <img src="{{ persona.img }}" alt="" />
+        </div>
+      </div>
+      <div class="testimonial-content">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+          <p class="title">{{ persona.nombre }} {{ persona.apellido }}</p>
+          <p class="post">Full Stack Developer Jr</p>
+          <p class="description">
+            {{ persona.descripcion }}
+          </p>
+        </div>
+      </div>
     </div>
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <p id="nombre">Noelia Belén Ludueña</p>
-    <p>Full Stack Developer Jr</p>
+  </div>
 </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <span>
-        <h2>Acerca de mi</h2>
-        <p> Soy Desarolladora Full Stack Jr con conocimiento en lenguajes de programación para la elaboración de paginas web. 
-            Como una persona inquisitiva, estoy interesada en extender mis competencias y poner en practica mis habilidades. 
-            Por consiguiente,busco un puesto desafiante para ganar experiencia y continuar con mi aprendizaje
-        </p> 
-        </span>
-    </div>
-</div>-->
-
-
-
-
-    
-        <div class="row">
-            <!--<div class="col-md-12 col-lg-12">-->
-                <div id="testimonial-slider">
-                    <div class="testimonial">
-                        <div class="pic">
-                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                            <img src="../../../assets/data/imagenes/profile.jpg" alt="">
-                        </div>
-                    </div>
-                        <div class="testimonial-content">
-                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                            <p class="title">{{persona.nombre}} {{persona.apellido}}</p>
-                            <p class="post">Full Stack Developer Jr</p>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor nibh, semper at pretium vitae, tincidunt non risus. Aenean mattis sit amet ex nec venenatis. Pellentesque tempus pellentesque efficitur. Nulla commodo bibendum quam, at imperdiet orci congue non. Maecenas interdum.
-                            </p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-       <!-- </div>-->
-   

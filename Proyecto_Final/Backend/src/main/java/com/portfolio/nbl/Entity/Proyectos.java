@@ -8,10 +8,9 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-
-
-@Entity
-public class Persona {
+@Entity 
+public class Proyectos {
+    
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
@@ -19,25 +18,23 @@ public class Persona {
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con el mínimo de caracteres")
-    private String nombre;
+    private String nombreP;
+    
+    /*@NotNull
+    @Size(min = 1, max = 50, message = "no cumple con el mínimo de caracteres")
+    private String apellido;*/
     
     @NotNull
-    @Size(min = 1, max = 50, message = "no cumple con el mínimo de caracteres")
-    private String apellido;
+    private String descripcionP;
     
-     @NotNull
-    private String descripcion;
-    
-  
     private String img;
 
-    public Persona() {
+    public Proyectos() {
     }
 
-    public Persona(String nombre, String apellido, String descripcion, String img) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.descripcion = descripcion;
+    public Proyectos(String nombreP, String descripcionP, String img) {
+        this.nombreP = nombreP;
+        this.descripcionP = descripcionP;
         this.img = img;
     }
 
@@ -49,28 +46,20 @@ public class Persona {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreP() {
+        return nombreP;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreP(String nombreP) {
+        this.nombreP = nombreP;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getDescripcionP() {
+        return descripcionP;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
     }
 
     public String getImg() {
@@ -82,6 +71,5 @@ public class Persona {
     }
     
     
-   
-   
+    
 }

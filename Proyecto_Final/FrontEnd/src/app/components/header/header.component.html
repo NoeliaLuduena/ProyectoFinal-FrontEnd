@@ -11,27 +11,32 @@
     <div class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><i class="bi bi-facebook text-info"></i
+          <a class="nav-link" href="https://github.com/NoeliaLuduena"
+            ><i class="bi bi-github text-info"></i
           ></a>
-        </li>
+          <!--</li>
         <li class="nav-item">
           <a class="nav-link" href="#"
-            ><i class="bi bi-instagram text-info"></i
-          ></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><i class="bi bi-twitter text-info"></i
-          ></a>
+            ><i class="bi bi-envelope-fill text-info"></i></a>
+        </li>-->
         </li>
       </ul>
     </div>
     <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-info" (click)="login()" *ngIf="!isLogged">
+      <button
+        type="button"
+        class="btn btn-info"
+        (click)="login()"
+        *ngIf="!isLogged"
+      >
         Login
       </button>
-      <button type="button" class="btn btn-info" (click)="onLogOut()" *ngIf="isLogged">
+      <button
+        type="button"
+        class="btn btn-info"
+        (click)="onLogOut()"
+        *ngIf="isLogged"
+      >
         Logout
       </button>
     </div>

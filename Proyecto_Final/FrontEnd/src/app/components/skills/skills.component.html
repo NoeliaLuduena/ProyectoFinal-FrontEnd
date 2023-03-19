@@ -1,37 +1,56 @@
+<div class="card">
 <div class="row">
-  <h2>Hard y Soft skills</h2>
-   <button type="button" routerLink="/newskill" class="btn btn-info" *ngIf="isLogged">Nueva Skill</button>
-    <div class="text-center col-sm-3 col-md-3 col-lg-3 circulo"  *ngFor="let skill of skill">
+  <div class="line"></div>
+ <h2 class="card-title">Hard y Soft skills</h2>
+ <div class="line"></div>
+ <div *ngIf="isLogged">
+ <button
+ type="button" 
+ routerLink="/newskill"
+      *ngIf="isLogged"
+      class="btn btn-info"
+      >Agregar habilidad
+      <i class="bi bi-plus-circle-fill"></i>
+      </button>
+ </div>
+      <div class="line"></div>
+   <div class="text-center col-sm-3 col-md-3 col-lg-3 circulo"  *ngFor="let skill of skill">
      <circle-progress
-      [percent]="skill.porcentaje"
+      [percent]="(skill.porcentaje)" 
       [radius]="100"
-      [title]="skill.nombre"
+      [title]="(skill.nombre)"
       [titleFontWeight]="'bold'"
-      [titleColor]="'#f16529'"
-      [titleFontSize]="'2em'"
+      [titleColor]="'#857b74'"
+      [titleFontSize]="'1.5em'"
       [showSubtitle]="false"
       [showTitle]="true"
       [showUnits]="false"
       [outerStrokeWidth]="20"
-      [innerStrokeWidth]="5"
-      [outerStrokeColor]="'#f16529'"
-      [innerStrokeColor]="'grey'"
+      [innerStrokeWidth]="3"
+      [outerStrokeColor]="' #0dcaf0 '"
+      [innerStrokeColor]="'#857b74'"
       [animation]="true"
-      [animationDuration]="1100"
+      [animationDuration]="1000"
     ></circle-progress>
-
     <div>
       <td *ngIf="isLogged">
-        <button routerLink="/editskill/{{ skill.id }}">
+        <button  class="btn btn-info" routerLink="/editskill/{{ skill.id }}">
           <i class="bi bi-pencil-fill"></i>
         </button>
+        <div class="space"></div>
       </td>
       <td *ngIf="isLogged">
-        <button (click)="delete(skill.id)">
+        <button  class="btn btn-info" (click)="delete(skill.id)">
           <i class="bi bi-x-circle-fill"></i>
         </button>
+        <div class="space"></div>
       </td>
-    </div>
+      <td *ngIf="isLogged">
+        <div class="line"></div>
+    </td>
   </div>
-
+    </div>
 </div>
+</div>
+
+

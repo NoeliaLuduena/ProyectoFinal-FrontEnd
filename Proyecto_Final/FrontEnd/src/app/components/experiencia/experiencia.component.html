@@ -1,25 +1,39 @@
-<div class="row">
-  <h2>Experiencia</h2>
-  <button type="button" class="btn btn-primary" routerLink="/nuevaexp" *ngIf="isLogged">Agregar experiencia</button>
-  <div class="container py-5">
-    <!--<div class="row">
-        <div class="col-lg-7 mx-auto">
-            <div class="card rounded-0 border-0 shadow">
-                <div class="card-body p-5">-->
-                  
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr *ngFor="let Experiencia of expe">
-                                    <th scope="col">{{Experiencia.nombreE}}</th>
-                                    <th scope="col">{{Experiencia.descripcionE}}</th>
-                                    <th scope="col" *ngIf="isLogged">
-                                        <button routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil-fill"></i></button></th>
-                                    <th scope="col" *ngIf="isLogged">
-                                        <button (click)="delete(Experiencia.id)"><i class="bi bi-x-circle-fill"></i></button></th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                           
-                        </table>
-                    </div>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Experiencia</h2>
+    <div class="btn-s">
+    <button
+      type="button"
+      class="btn btn-info"
+      routerLink="/nuevaexp"
+      *ngIf="isLogged"
+    >Agregar experiencia
+      <i class="bi bi-plus-circle-fill"></i>
+    </button>
+  </div>
+    <div class="line"></div>
+    <div *ngFor="let Experiencia of expe">
+      <div class="card-text">{{ Experiencia.nombreE }}</div>
+      <p class="card-text">{{ Experiencia.descripcionE }}</p>
+      <footer>
+        <button
+          class="btn btn-info"
+          routerLink="/editexp/{{ Experiencia.id }}"
+          *ngIf="isLogged"
+        >
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <div class="space"></div>
+        <button
+          class="btn btn-info"
+          (click)="delete(Experiencia.id)"
+          *ngIf="isLogged"
+        >
+          <i class="bi bi-x-circle-fill"></i>
+        </button>
+        <div class="space"></div>
+        <div class="line"></div>
+      </footer>
+    </div>
+  </div>
+</div>

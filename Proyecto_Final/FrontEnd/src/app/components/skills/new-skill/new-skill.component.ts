@@ -8,8 +8,8 @@ import { Skill } from 'src/app/model/skill';
   templateUrl: './new-skill.component.html',
   styleUrls: ['./new-skill.component.css']
 })
-export class NewSkillComponent implements OnInit {
 
+export class NewSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
 

@@ -22,6 +22,10 @@ import { NewEducacionComponent } from './components/educacion/new-educacion/new-
 import { EditeducacionComponent } from './components/educacion/editeducacion/editeducacion.component';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill/new-skill.component';
+import { EditAcercadeComponent } from './components/acerca-de/edit-acercade/edit-acercade.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto/edit-proyecto.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +45,10 @@ import { NewSkillComponent } from './components/skills/new-skill/new-skill.compo
     NewEducacionComponent,
     EditeducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditAcercadeComponent,
+    NewProyectoComponent,
+    EditProyectoComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +56,7 @@ import { NewSkillComponent } from './components/skills/new-skill/new-skill.compo
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
+   
   ],
   providers: [ interceptorProvider ],
   bootstrap: [AppComponent]

@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
- 
-  URL = 'http://localhost:8080/skill/';
+ //local
+  //URL = 'http://localhost:8080/skill/';
+  URL = 'https://nblback.onrender.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
 
